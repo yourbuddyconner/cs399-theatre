@@ -18,7 +18,7 @@ body {
 
 .navbar {
     background: rgb(0, 0, 0);
-    margin-bottom: 15px !important; 
+    margin-bottom: 0px !important; 
     /* Fall-back for browsers that don't support rgba */
     background: rgba(0, 0, 0, .8);
 }
@@ -94,6 +94,12 @@ footer #social-icons a {
 	height: 60%;
 }
 
+.carousel-indicators {
+	top: 40px;
+	left: 19%;
+}
+
 .item img{
 	margin: 0 auto;
+	height: 70%;
 }
