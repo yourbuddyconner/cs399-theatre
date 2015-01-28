@@ -21,8 +21,8 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top ">
-        <div class="container">
+    <nav class="navbar navbar-inverse navbar-static-top ">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1">
@@ -82,9 +82,12 @@
 
 
     <!-- Template Content -->
-    <div class="container">
-    {% block content %}{% endblock %}
-    </div>  
+    <div class="wrap">
+      <div class="container">
+        {% block content %}{% endblock %}
+      </div>  
+    </div>
+    
     <!-- End Template Content -->
 
     <!-- Footer -->
@@ -92,19 +95,19 @@
         <div class="container">
             <div id="social-icons">
                 <a href="">
-                    <i class="fa fa-twitter fa-5x"></i>
+                    <i class="fa fa-twitter fa-2x"></i>
                 </a>
                 <a href="">
-                    <i class="fa fa-facebook fa-5x"></i>
+                    <i class="fa fa-facebook fa-2x"></i>
                 </a>
                 <a href="">
-                    <i class="fa fa-instagram fa-5x"></i>
+                    <i class="fa fa-instagram fa-2x"></i>
                 </a>
                 <a href="">
-                    <i class="fa fa-youtube fa-5x"></i>
+                    <i class="fa fa-youtube fa-2x"></i>
                 </a>
                 <a href="">
-                    <i class="fa fa-soundcloud fa-5x"></i>
+                    <i class="fa fa-soundcloud fa-2x"></i>
                 </a>
             </div>
             <div class="row">
