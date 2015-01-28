@@ -25,9 +25,6 @@
 			    </div>
 			    <div class="item">
 			      <img src="static/images/slideshowplaceholder.gif" alt="...">
-			      <div class="carousel-caption">
-			        For			      
-			      </div>
 			    </div>
 			    <div class="item">
 			      <img src="static/images/slideshowplaceholder.gif" alt="...">
@@ -61,6 +58,7 @@
 		</div>
 		<div class="col-md-6 text-center" id="shows">
 		<!-- generate these with django -->
+		{% for show in shows|slice:":5" %}
 			<div class="media">
 			  <div class="media-left">
 			    <a href="#">
@@ -69,40 +67,15 @@
 			  </div>
 			  <div class="media-body text-left">
 			    <h4 class="media-heading">Show Title</h4>
+			    <em>
+			    	{{show.date}}
+			    </em>
 			    <p>
-			    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			    	tempor incididunt ut labore et dolore magna aliqua. 
+			    	{{show.description}} 
 			    </p>
 			  </div>
 			</div>
-			<div class="media">
-			  <div class="media-left">
-			    <a href="#">
-			      <img class="media-object" src="http://placehold.it/80x80" alt="...">
-			    </a>
-			  </div>
-			  <div class="media-body text-left">
-			    <h4 class="media-heading">Show Title</h4>
-			    <p>
-			    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			    	tempor incididunt ut labore et dolore magna aliqua. 
-			    </p>
-			  </div>
-			</div>
-			<div class="media">
-			  <div class="media-left">
-			    <a href="#">
-			      <img class="media-object" src="http://placehold.it/80x80" alt="...">
-			    </a>
-			  </div>
-			  <div class="media-body text-left">
-			    <h4 class="media-heading">Show Title</h4>
-			    <p>
-			    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			    	tempor incididunt ut labore et dolore magna aliqua. 
-			    </p>
-			  </div>
-			</div>
+		{% endfor %}
 		</div>
 		<div class="col-md-3" id="calendar">
 			<!-- Responsive calendar - START -->
