@@ -66,15 +66,17 @@
 			    </a>
 			  </div>
 			  <div class="media-body text-left">
-			    <h4 class="media-heading">Show Title</h4>
+			    <h4 class="media-heading">{{show.name}}</h4>
 			    <em>
 			    	{{show.date}}
 			    </em>
 			    <p>
 			    	{{show.description}} 
 			    </p>
+			    <button class="btn btn-primary">Buy Tickets</button>
 			  </div>
 			</div>
+			<hr>
 		{% endfor %}
 		</div>
 		<div class="col-md-3" id="calendar">
@@ -104,7 +106,10 @@
 $(document).ready( function() {
   $('.responsive-calendar').responsiveCalendar({
 	events: {
-		"2015-01-30": {"number": 1, "badgeClass": "label-warning", "url": "#"}
+		"2015-01-30": {
+			"number": 2,
+			"url": "#"
+		}
   	}
   });
 });

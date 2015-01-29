@@ -1,19 +1,25 @@
+from django.db import models
 from app import fake
+from django.utils import timezone
+import datetime
 
-def generate_shows(num):
-    """
-    Function generates a number of shows using the faker python package.
-    """
-    shows = []
+class Show(models.Model):
+	name = models.CharField(max_length=100)
+	description = models.CharField(max_length=500)
+	start_date = models.DateField('day the show begins')
+	end_date = models.DateField('day the show ends')
+	
+	# returns a friendly name for django
+	def __unicode__(self):
+		return self.name
 
-    for i in range(num):
-        shows.append({
-            'date': fake.dateTimeBetween('now', '+1y'),
-            'description': fake.text()
-        })
+	def isPlayingCurrently(self):
+		return self.end_date <= datetime.date.today()
 
-    shows.sort(key=lambda x: x['date'])
-
-    return shows
-
-shows = generate_shows(10)
+class Ticket(models.Model):
+	show = models.ForeignKey(Show)
+	price = models.DecimalField(decimal_places=2, max_digits=5)
+	
+	# returns a friendly name for django
+	def __unicode__(self):             
+		return str(self.show.name) + ": $" + str(self.price)

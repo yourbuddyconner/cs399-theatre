@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from app.models import shows
+from app.models import Show
 
 
 def home(request):
-    return render(request, 'home.html', {'shows': shows})
+    return render(request, 'home.html', {'shows': Show.objects.all()})
 
 def directions(request):
     return render(request, 'directions.html')
