@@ -1,5 +1,4 @@
 from django.db import models
-from app import fake
 from django.utils import timezone
 import datetime
 
