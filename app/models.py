@@ -1,10 +1,12 @@
 from django.db import models
 from django.utils import timezone
+from app.settings import MEDIA_ROOT
 import datetime
 
 class Show(models.Model):
 	name = models.CharField(max_length=100)
 	description = models.CharField(max_length=500)
+	image = models.ImageField(upload_to='images/shows', default='static/images/placehold_square.gif')
 	start_date = models.DateField('day the show begins')
 	end_date = models.DateField('day the show ends')
 	
