@@ -14,5 +14,5 @@ def merchandise(request):
 def tickets(request):
     return render(request, 'tickets.html')
 
-def schedule(request):
-    return render(request, 'schedule.html')
+def shows(request):
+    return render(request, 'shows.html', {'shows': Show.objects.all()})

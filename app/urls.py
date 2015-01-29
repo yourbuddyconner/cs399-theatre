@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     url(r'^directions', 'app.views.directions', name='directions'),
     url(r'^merchandise', 'app.views.merchandise', name='merchandise'),
     url(r'^tickets', 'app.views.tickets', name='tickets'),
-    url(r'^schedule', 'app.views.schedule', name='schedule'),
+    url(r'^shows', 'app.views.shows', name='shows'),
     url(r'^admin/', include(admin.site.urls)),
     # For serving media files
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT, 'show_indexes': True}),

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+	{% for show in shows %}
+		<div class="col-md-4 text-center margin-bottom">
+			<img src="{{MEDIA_ROOT}}{{show.image.url}}">
+			<p>{{show.name}}</p>
+			<button class="btn btn-primary">Buy Tickets</button>
+		</div>
+	{% endfor %}
+	</div>
+</div>
+{% endblock %}
