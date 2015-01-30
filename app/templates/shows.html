@@ -7,7 +7,7 @@
 	<div class="row">
 	{% for show in shows %}
 		<div class="col-md-4 text-center margin-bottom">
-			<img src="{{MEDIA_ROOT}}{{show.image.url}}">
+			<img src="{{MEDIA_ROOT}}{{show.image.url}}" class="show-pic">
 			<p>{{show.name}}</p>
 			<button class="btn btn-primary">Buy Tickets</button>
 		</div>
