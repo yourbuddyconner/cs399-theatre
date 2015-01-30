@@ -3,7 +3,7 @@ from datetime import date
 
 if not Show.objects.all():
 	print "Seeding dB!"
-	Show(
+	Show.objects.create(
 		name = "Yolo Swag: The Musical",
 		description = "Too much yolo to handle.",
 		image = "/media/images/shows/80x80.gif",
