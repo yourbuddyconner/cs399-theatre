@@ -103,6 +103,14 @@ footer #social-icons a {
 	left: 19%;
 }
 
+.carousel-caption {
+    top: 10%;
+    left: 10%;
+    width: 550px;
+    text-align: left;
+    display: inline-block;
+}
+
 .item img { 
     margin: 0 auto;
     width: 100%;

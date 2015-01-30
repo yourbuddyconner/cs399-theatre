@@ -104,10 +104,25 @@
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
                   <img src="static/images/lady.jpg" alt="...">
+                  <div class="carousel-caption text-left">
+                        <h3>
+                            Theatre Name!
+                        </h3>
+                        <button class="btn btn-primary">Visit Today!</button>
+                    </div>
                 </div>
                 {% for show in shows|slice:":4" %}
                 <div class="item">
-                  <img src="{{show.image}}" alt="...">
+                    <img src="{{show.image}}" alt="...">
+                    <div class="carousel-caption">
+                        <h3>
+                            {{show.name}}
+                        </h3>
+                        <p>
+                            {{show.description}}
+                        </p>
+                        <button class="btn btn-primary">Buy Tickets!</button>
+                    </div>
                 </div>
                 {% endfor %}
               </div>
