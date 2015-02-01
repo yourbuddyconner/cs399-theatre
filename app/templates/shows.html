@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{% endblock %}
+{% block title %}{% load strip_up %}{{ X |strip_up:request.path }}{% endblock %}
 
 {% block content %}
 <div class="container">
