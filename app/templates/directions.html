@@ -1,14 +1,53 @@
 {% extends "base.html" %}
 
 {% block title %}{% load strip_up %}{{ X |strip_up:request.path }}{% endblock %}
-    {% block nav-directions %}style = "border-bottom-right-radius: 25px;border-left-color: transparent;border-top-color: transparent;border-style: ridge;"{% endblock %}
+
+{% block nav-directions %}style = "border-bottom-right-radius: 25px;border-left-color: transparent;
+    border-top-color: transparent;border-style: ridge;"{% endblock %}
 
 {% block content %}
+    <div class="container"  style="align-content: center">
 	<div class="row">
-		<div class="col">
-			<p>
-				Insert content for directions here!
-			</p>
+		<div class="col-md-4">
+            <form action="">
+
+            <input type="text" name="from">
+            <button type="submit">Get directions</button>
+            </form>
 		</div>
+
+        <div class="col-md-8" id="location_map" onload="initialize()">
+
+
+        </div>
 	</div>
+    </div>
+{% endblock %}
+
+{% block JS %}
+        <script src="http://goo.gl/t6ubRW"></script>
+    <script >
+function initialize() {
+    var map;
+    var location = new google.maps.LatLng(35.188060, -111.657616);
+    var mapOptions = {
+        zoom: 18,
+        center: location,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    map = new google.maps.Map(document.getElementById('location_map'),
+          mapOptions);
+    new google.maps.Marker({
+        position: location,
+        map: map
+    });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    function direct(){
+
+    }
+    </script>
 {% endblock %}

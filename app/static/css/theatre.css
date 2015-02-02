@@ -34,6 +34,13 @@ body {
 li{
     border: 1px;
 }
+#location_map{
+        height: 500px;
+        width:  500px;
+        margin: 0px;
+        padding: 0px
+        float: right;
+      }
 .section {
     padding: 50px 0;
     min-height: 450px;
