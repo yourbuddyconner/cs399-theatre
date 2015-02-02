@@ -31,3 +31,6 @@ class Merchandise(models.Model):
 	image = models.ImageField(upload_to='images/shows', default='static/images/placehold_square.gif')
 	price = models.IntegerField(default=0)
 
+	# returns a friendly name for django
+	def __unicode__(self):             
+		return str(self.name) + ": $" + str(self.price)
