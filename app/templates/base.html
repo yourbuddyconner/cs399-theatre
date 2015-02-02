@@ -43,16 +43,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li {% block nav-directions %} {% endblock %}>
-                        <a href="{% url 'directions' %}">Directions</a>
+                        <a href="{% url 'directions' %}" class="{% if request.path == '/directions' %}active{% endif %}">Directions</a>
                     </li>
                     <li {% block nav-schedule %} {% endblock %}>
-                        <a href="{% url 'shows' %}">Shows</a>
+                        <a href="{% url 'shows' %}" class="{% if request.path == '/shows' %}active{% endif %}">Shows</a>
                     </li>
                     <li {% block nav-merch %} {% endblock %}>
-                        <a href="{% url 'merchandise' %}">Merchandise</a>
+                        <a href="{% url 'merchandise' %}" class="{% if request.path == '/merchandise' %}active{% endif %}">Merchandise</a>
                     </li>
                     <li {% block nav-tickets %} {% endblock %}>
-                        <a href="{% url 'tickets' %}">Tickets</a>
+                        <a href="{% url 'tickets' %}" class="{% if request.path == '/tickets' %}active{% endif %}">Tickets</a>
                     </li>
                     <li><a href="#anchor">Jump</a>
                     </li>

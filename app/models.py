@@ -24,3 +24,10 @@ class Ticket(models.Model):
 	# returns a friendly name for django
 	def __unicode__(self):             
 		return str(self.show.name) + ": $" + str(self.price)
+
+class Merchandise(models.Model):
+	name = models.CharField(max_length=100)
+	description = models.CharField(max_length=500)
+	image = models.ImageField(upload_to='images/shows', default='static/images/placehold_square.gif')
+	price = models.IntegerField(default=0)
+

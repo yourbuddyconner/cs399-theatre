@@ -6,6 +6,10 @@ body {
     /* To account for fixed footer*/
     margin-bottom: 90px;
 }
+/* For active links in the nav bar */
+.active {
+    color: white !important;
+}
 
 .margin-bottom {
 	margin-bottom: 25px;
