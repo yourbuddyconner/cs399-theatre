@@ -54,6 +54,8 @@
                     <li {% block nav-tickets %} {% endblock %}>
                         <a href="{% url 'tickets' %}">Tickets</a>
                     </li>
+                    <li><a href="#anchor">Jump</a>
+                    </li>
                     <li><a href="https://github.com/yourbuddyconner/cs399-theatre">Github</a>
                     </li>
                 </ul>
@@ -141,6 +143,7 @@
         </div>
       </div>
       <!-- End Slideshow -->
+    <a name="anchor"></a>
       {% block content %}{% endblock %}
     </div>
     
