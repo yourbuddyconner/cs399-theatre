@@ -3,6 +3,7 @@
 {% block title %}{% load strip_up %}{{ X |strip_up:request.path }}{% endblock %}
 
 {% block content %}
+    {% block nav-merch %}style = "border-bottom-right-radius: 25px;border-left-color: transparent;border-top-color: transparent;border-style: ridge;"{%  endblock %}
 	<div class="row">
 		<div class="col">
 			<p>
