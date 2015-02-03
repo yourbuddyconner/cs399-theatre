@@ -5,9 +5,9 @@ import django.db.utils
 try: 
 	if not Merchandise.objects.all():
 		Merchandise.objects.create(
-			name = "Marvin's Marvelous Cucumber Grab Bag"
-			description = "So you can recreate the heartwarming occurances of 'Get These Cucumbers Off Of My Face', we're offering a special limited time grab bag of assorted cucumbers! Comes in a decorative burlap sack."
-			image = "/static/images/merchandise/cucumber.jpg"
+			name = "Marvin's Marvelous Cucumber Grab Bag",
+			description = "So you can recreate the heartwarming occurances of 'Get These Cucumbers Off Of My Face', we're offering a special limited time grab bag of assorted cucumbers! Comes in a decorative burlap sack.",
+			image = "/static/images/merchandise/cucumber.jpg",
 			price = 999
 		)
 	if not Show.objects.all():

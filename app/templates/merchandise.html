@@ -4,11 +4,26 @@
 
 
 {% block content %}
-	<div class="row">
-		<div class="col">
-			<p>
-				Insert content for merchandise here!
-			</p>
+	<div class="container">
+		<div class="row">
+			{% for item in merchandise %}
+
+				<div class="col-md-4 text-center">
+					<h3>
+						{{item.name}}
+					</h3>
+					<p>
+						{{item.description}}
+					</p>
+					<p>
+						<em>{{item.price}}</em>	
+						<button>
+							Add To Cart
+						</button>
+					</p>
+				</div>
+
+			{% endfor %}
 		</div>
 	</div>
 {% endblock %}

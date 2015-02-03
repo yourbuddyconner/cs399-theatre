@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from app.models import Show
+from app.models import Show, Merchandise
 
 
 def home(request):
@@ -9,7 +9,7 @@ def directions(request):
     return render(request, 'directions.html')
 
 def merchandise(request):
-    return render(request, 'merchandise.html')
+    return render(request, 'merchandise.html', {'merchandise': Merchandise.objects.all()})
 
 def tickets(request):
     return render(request, 'tickets.html')
