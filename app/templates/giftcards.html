@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{% load strip_up %}{{ X |strip_up:request.path }}{% endblock %}
+
+{% block content %}
+
+	<div class="container">
+		<h2><ins>Gift Cards</ins></h2>
+		<table class="table">
+			<tr>
+				<td><h4>The Smelly Vagrant Platinum</h4></td>
+				<td><h4>$200</h4></td>
+				<td><button class="btn btn-primary">Buy Gift Card</button></td>
+			</tr>
+			<tr>
+				<td><h4>The Smelly Vagrant Standard</h4></td>
+				<td><h4>$50</h4></td>
+				<td><button class="btn btn-primary">Buy Gift Card</button></td>
+			</tr>
+			<tr>
+				<td><h4>Show for Two</h4></td>
+				<td><h4>$20</h4></td>
+				<td><button class="btn btn-primary">Buy Gift Card</button></td>
+			</tr>
+		</table>
+	</div
+{% endblock %}
