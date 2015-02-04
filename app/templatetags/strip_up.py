@@ -7,5 +7,5 @@ def strip_up(string, welp):
     s = welp.strip("\\")
     s = s.strip("\/")
     if s=='':
-        return 'HOME'
-    return s.upper()
+        return 'Home'
+    return s.capitalize()
