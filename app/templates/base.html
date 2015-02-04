@@ -196,12 +196,10 @@
         $(document).scroll(function() {
             if ($(this).scrollTop() > 50) {
                 // animate fixed div to small size:
-                $('.item').stop().animate({ height: 300 },100);
-                console.log("swoeep");
+                $('.item').stop().animate({ height: 300, easing: 'linear', duration: 1000 },100);
             } else {
                 //  animate fixed div to original size
-                $('.item').stop().animate({ height: 600 },100);
-                console.log("swoop");
+                $('.item').stop().animate({ height: 600, easing: 'linear', duration: 1000 },100);
             }
         }); 
     </script>
