@@ -3,11 +3,48 @@
 {% block title %}{% load strip_up %}{{ X |strip_up:request.path }}{% endblock %}
 
 {% block content %}
-	<div class="row">
-		<div class="col">
-			<p>
-				Insert content for tickets here!
-			</p>
+	<head>
+		<style>
+			h4 {
+				color: maroon;
+				margin-left: 40px;
+			} 
+		</style>
+	</head>
+	<div class="container">
+		<div class="row">
+		  <div class="col-sm-5">
+			<h2><ins>How to Buy Your Tickets</ins></h2>
+			<br>
+			<h4><ins>Buying Tickets has Never Been Easier</ins></h4>
+			<b>
+				You can pay for your tickets over the phone, in person at the box office, and online.
+				<p>We accept cash and all major credit cards including:
+				Visa, American Express, Mastercard and Discover.</p>
+				We also sell gift cards for friends and family!
+			</b>
+			<h4><ins>Phone Number</ins></h4>
+			<p><b>(480)-867-5309</b></p>
+			<br>
+			<h4><ins>Phone Line Hours</ins></h4>
+			<p><b>Wednesday - 11 A.M. - 8 P.M.</b></p>
+			<p><b>Thursday  - 11 A.M. - 8 P.M.</b></p>
+			<p><b>Friday    - 9 A.M.  - 8 P.M.</b></p>
+			<p><b>Saturday  - 9 A.M.  - 8 P.M.</b></p>
+			<p><b>Sunday    - 11 A.M. - 8 P.M.</b></p>
+			<br>
+			<h4><ins>Online</ins></h4>
+			<p><a href="shows.html"><b><ins>Upcoming Shows</ins></b></a></p>
+			<br>
+			<h4><ins>In Person</ins></h4>
+			<p><a href="home.html"><b><ins>Currently Playing</ins></b></a></p>
+			<br>
+			<h4><ins>Gift Cards</ins></h4>
+			<a href="giftcards.html"><b><ins>Gift Cards</ins></b></a>
+			<br>
+			<br>
+		  </div>
 		</div>
-	</div>
+	</div
+	
 {% endblock %}

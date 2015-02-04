@@ -16,3 +16,6 @@ def tickets(request):
 
 def shows(request):
     return render(request, 'shows.html', {'shows': Show.objects.all()})
+	
+def giftcards(request):
+    return render(request, 'giftcards.html')
