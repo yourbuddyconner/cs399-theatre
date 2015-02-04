@@ -194,12 +194,12 @@
     <script src="static/js/responsive-calendar.js"></script>
     <script type="text/javascript">
         $(document).scroll(function() {
-            if ($(this).scrollTop() > 50) {
+            if ($(this).scrollTop() > 300) {
                 // animate fixed div to small size:
-                $('.item').stop().animate({ height: 300, easing: 'linear', duration: 1000 },100);
+                $('.item').stop().animate({ height: 300, easing: 'linear', duration: 1500 },100);
             } else {
                 //  animate fixed div to original size
-                $('.item').stop().animate({ height: 600, easing: 'linear', duration: 1000 },100);
+                $('.item').stop().animate({ height: 600-$(this).scrollTop(), easing: 'linear', duration: 1500 },100);
             }
         }); 
     </script>
