@@ -4,47 +4,78 @@
 
 {% block content %}
     <div class="container"  style="align-content: center">
-	<div class="row">
-		<div class="col-md-4">
-            <form action="">
-
-            <input type="text" name="from">
-            <button type="submit">Get directions</button>
+	<div class="row" style="text-align: justify;">
+		<div class="col-md-4" style="max-height: 500px; width: 500px;">
+            <form onsubmit="getAdd()" action="">
+                <input type="text"  id="address" value="">
+                <input type="Submit">
             </form>
-		</div>
+    </div>
+    <div class="col-md-4" id="location_map" onload="initialize()">
 
-        <div class="col-md-8" id="location_map" onload="initialize()">
-
-
-        </div>
+    </div>
 	</div>
     </div>
 {% endblock %}
 
 {% block JS %}
-        <script src="http://goo.gl/t6ubRW"></script>
-    <script >
-function initialize() {
-    var map;
-    var location = new google.maps.LatLng(35.188060, -111.657616);
-    var mapOptions = {
-        zoom: 18,
-        center: location,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
+    <script src="http://goo.gl/t6ubRW"></script>
+    <script>
 
-    map = new google.maps.Map(document.getElementById('location_map'),
-          mapOptions);
-    new google.maps.Marker({
-        position: location,
-        map: map
-    });
-}
+        var map;
+        var destin = new google.maps.LatLng(35.1880216, -111.6576671);
+        var start;
+        var dirDisplay = new google.maps.DirectionsRenderer();
+        var dirService = new google.maps.DirectionsService();
+        var geoCoder = new google.maps.Geocoder();
 
-google.maps.event.addDomListener(window, 'load', initialize);
+        var mapOptions = {
+            zoom: 18,
+            center: destin,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
 
-    function direct(){
+    function initialize() {
 
+{#            if (start == destin) {#}
+                map = new google.maps.Map(document.getElementById('location_map'),
+                mapOptions);
+
+            new google.maps.Marker({
+                position: destin,
+                map: map
+
+            });
+            if(document.getElementById('address')) {
+                dirDisplay.setMap(map);
+                google.maps.event.trigger(map, 'resize');
+            }
     }
+
+        function geoCode(){
+            var address = document.getElementById('address').value;
+            geoCoder.geocode( {'address':address}, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                  start= results[0].geometry.location;
+                };
+            });
+            }
+
+    function getAdd(){
+        geoCode();
+        var route = {
+            origin:start,
+            destination: destin,
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+        dirService.route(route, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                dirDisplay.setDirections(response);}
+     });
+    }
+
+google.maps.event.addDomListener(window, 'onsubmit', initialize());
+google.maps.event.addDomListener(window, 'load', initialize());
+
     </script>
 {% endblock %}
