@@ -4,6 +4,7 @@ from app.models import Show, Merchandise
 
 def home(request):
     return render(request, 'home.html', {
+    	'shows': Show.objects.all(),
     	'slideshow_items': Show.objects.all()
     })
 
@@ -20,11 +21,13 @@ def merchandise(request):
 
 def tickets(request):
     return render(request, 'tickets.html',{
+    	'shows': Show.objects.all(),
     	'slideshow_items': Show.objects.all()
     })
 
 def shows(request):
     return render(request, 'shows.html', {
+    	'shows': Show.objects.all(),
     	'slideshow_items': Show.objects.all()
     })
 	

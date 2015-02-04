@@ -192,6 +192,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <!-- for responsive calendar -->
     <script src="static/js/responsive-calendar.js"></script>
+    <script type="text/javascript">
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 50) {
+                // animate fixed div to small size:
+                $('.item').stop().animate({ height: 300 },100);
+                console.log("swoeep");
+            } else {
+                //  animate fixed div to original size
+                $('.item').stop().animate({ height: 600 },100);
+                console.log("swoop");
+            }
+        }); 
+    </script>
 {% block JS %}{% endblock %}
     <!-- End Scripts -->
   </body>
