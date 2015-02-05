@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}{% load strip_up %}{{ X |strip_up:request.path }}{% endblock %}
+
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+				<h1>
+					Get these Cucumbers Off Of My Face
+				</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-3" id="newsletter">
+				<img class="media-object show-pic" src="{% static "images/shows/cucumber-mask.jpg" %}" alt="Get these Cucumbers Off Of My Face"/>
+			</div>
+			
+			<div class="col-md-6 text-center" id="shows">
+				
+				<p>
+					A heartwarming adventure, that will test the friendship of three best friends. In an alternate timeline, a masseuse, a hairdresser and a bank teller go on a crime spree.
+				</p>
+
+				<button class="btn btn-primary">Buy Tickets</button>
+			</div>
+
+			<div class="col-md-3" id="calendar">
+				<h3>The Smelly Vagrant Theater</h3>
+				<p> NAU Ardrey Auditorium </p>
+				<h3>Running Time</h3>
+				<p>Unbelievably Long with no intermission</p>
+				<h3>Age Recommendation</h3>
+				<p>Ages 16+</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}
