@@ -3,13 +3,16 @@
 {% block title %}{% load strip_up %}{{ X |strip_up:request.path }}{% endblock %}
 
 {% block content %}
-    <div class="container"  style="align-content: center">
-	<div class="row" style="text-align: justify;">
-		<div class="col-md-4" style="max-height: 500px; width: 500px;">
+    <div class="container" style="text-align: center;">
+    	<div class="row" style="text-align:center;">
+    		<div class="col-xs-6 " style="vertical-align: top;max-height: 400px; width:400px; overflow-y: scroll;display:inline-block;float:none;text-align:center;margin-right: 5%">
                 <input type="text"  id="address">
-                <button id="sub">Get Directions</button>
-    </div>
-    <div class="col-md-4" id="location_map" onload="initialize()">
+                <button id="sub" onclick="getAdd()">Get Directions</button>
+                <div id="text">
+
+            </div>
+        </div>
+    <div class="col-xs-6" id="location_map" style="display:inline-block;float:none;text-align:center;margin-left: 5%" onload="initialize()">
 
     </div>
 	</div>
@@ -44,10 +47,10 @@
                 map: map
 
             });
-            if(document.getElementById('address')) {
                 dirDisplay.setMap(map);
+                dirDisplay.setPanel(document.getElementById('text'));
                 google.maps.event.trigger(map, 'resize');
-            }
+
     }
 
         function geoCode(){
@@ -71,6 +74,7 @@
                 dirDisplay.setDirections(response);}
      });
     }
+
 document.getElementById("sub").addEventListener("click", getAdd);
 
 google.maps.event.addDomListener(window, 'onsubmit', initialize());

@@ -39,11 +39,10 @@ li{
     border: 1px;
 }
 #location_map{
-        height: 500px;
-        width:  500px;
+        height: 400px;
+        width:  400px;
         margin: 0px;
         padding: 0px
-        float: right;
       }
 .section {
     padding: 50px 0;
