@@ -59,7 +59,7 @@ try:
 			image = "/static/images/shows/cucumber-mask.jpg",
 			start_date = date(2015, 12, 24),
 			end_date = date(2015, 1, 30),
-			show_url = "/show1"
+			show_url = "/show1#bot_anchor"
 			)
 		Show.objects.create(
 			name = "The Thing: The 3D Experience",
@@ -67,7 +67,7 @@ try:
 			image = "/static/images/shows/glasses-hair.jpg",
 			start_date = date(2014, 12, 24),
 			end_date = date(2015, 1, 30),
-			show_url = "/show2"
+			show_url = "/show2#bot_anchor"
 			)
 		Show.objects.create(
 			name = "It Pays To Buy Good Tea",
@@ -75,7 +75,7 @@ try:
 			image = "/static/images/shows/it-pays-tea.jpg",
 			start_date = date(2015, 3, 24),
 			end_date = date(2016, 4, 5),
-			show_url = "/show3"
+			show_url = "/show3#bot_anchor"
 			)
 		Show.objects.create(
 			name = "Sasquatch",
@@ -83,7 +83,7 @@ try:
 			image = "/static/images/shows/sasquatch.jpg",
 			start_date = date(2015, 4, 7),
 			end_date = date(2016, 5, 25),
-			show_url = "/show4"
+			show_url = "/show4#bot_anchor"
 			)
 		Show.objects.create(
 			name = "Yolo Swag: The Musical",
@@ -91,7 +91,7 @@ try:
 			image = "/static/images/shows/yolo-swag.jpg",
 			start_date = date(2015, 1, 24),
 			end_date = date(2015, 3, 5),
-			show_url = "/show5"
+			show_url = "/show5#bot_anchor"
 			)
 		Show.objects.create(
 			name = "Your Mom: The Saga Continues",
