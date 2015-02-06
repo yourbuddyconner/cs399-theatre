@@ -8,8 +8,21 @@ try:
 			name = "Marvin's Marvelous Cucumber Grab Bag",
 			description = "So you can recreate the heartwarming occurances of 'Get These Cucumbers Off Of My Face', we're offering a special limited time grab bag of assorted cucumbers! Comes in a decorative burlap sack.",
 			image = "/static/images/merchandise/cucumber.jpg",
-			price = 999
+			price = 9.
 		)
+		Merchandise.objects.create(
+			name = "Vagrant Devotion Cup", 
+			description = "Just our way of saying 'Thanks for choosing the Smelly Vagrant'. Refills on red wine are only 50 cents with the purchase of this cup. Restrictions apply, discount refills on Tuesdays and Thursday afternoons between 12 and 2 only.",
+			image = "/static/images/merchandise/cucumber.jpg",
+			price = 15.00
+		)
+		Merchandise.objects.create(
+			name = "Pile of Hankies", 
+			description = "A customized handkerchief for all those weepy moments in 'Sasquatch'. Trust us, you're gonna need 'em. Especailly during that one part with the death of... oh wait, no spoilers! You're going to have to get a ticket to find out",
+			image = "/static/images/merchandise/cucumber.jpg",
+			price = 5.00
+		)
+		
 	if not Show.objects.all():
 		Show.objects.create(
 			name = "Get These Cucumbers Off Of My Face",

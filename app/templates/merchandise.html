@@ -6,9 +6,14 @@
 {% block content %}
 	<div class="container">
 		<div class="row">
+					<div class="col-md-3 text-center">
+						<img src="/static/images/merchandise/cucumber.jpg" style ="width:200px;height:233px"></img>
+						<img src="/static/images/merchandise/cup.jpg" style ="width:200px;height:233px"></img>
+						<img src="/static/images/merchandise/tissue.jpg" style ="width:200px;height:233px"></img>
+					</div>
 			{% for item in merchandise %}
 
-				<div class="col-md-4 text-center">
+				<div class="row-md-4 text-left"><br><br><br>
 					<h3>
 						{{item.name}}
 					</h3>
