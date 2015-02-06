@@ -9,6 +9,7 @@ class Show(models.Model):
 	image = models.ImageField(upload_to='images/shows', default='static/images/placehold_square.gif')
 	start_date = models.DateField('day the show begins')
 	end_date = models.DateField('day the show ends')
+	show_url = models.CharField(max_length=100, default='/')
 	
 	# returns a friendly name for django
 	def __unicode__(self):

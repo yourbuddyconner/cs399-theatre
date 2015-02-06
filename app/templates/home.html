@@ -21,7 +21,8 @@
 		{% for show in shows|slice:":5" %}
 			<div class="media">
 			  <div class="media-left">
-			    <a href="#">
+
+			    <a href="{{show.show_url}}">
 			      <img class="media-object show-pic" src="{{MEDIA_ROOT}}{{show.image.url}}" alt="...">
 			    </a>
 			  </div>
