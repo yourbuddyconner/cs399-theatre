@@ -4,15 +4,23 @@
 
 {% block content %}
     <div class="container" style="text-align: center;">
-    	<div class="row" style="text-align:center;">
-    		<div class="col-xs-6 " style="vertical-align: top;max-height: 400px; width:400px; overflow-y: scroll;display:inline-block;float:none;text-align:center;margin-right: 5%">
+        <div class="row">
+            <h2>
+                Get Directions to the Smelly Vagrant
+            </h2>
+            <p>
+                Enter your address into the box below and allow Google to show you where to go!
+            </p>
+        </div>
+        <hr>
+    	<div class="row text-center">
+    		<div class="col-xs-6 text-center" id="directions-container">
                 <input type="text"  id="address">
                 <button id="sub" onclick="getAdd()">Get Directions</button>
                 <div id="text">
-
             </div>
         </div>
-    <div class="col-xs-6" id="location_map" style="display:inline-block;float:none;text-align:center;margin-left: 5%" onload="initialize()">
+    <div class="col-xs-6 text-center" id="location_map" onload="initialize()">
 
     </div>
 	</div>
