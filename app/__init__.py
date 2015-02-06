@@ -10,6 +10,48 @@ try:
 			image = "/static/images/merchandise/cucumber.jpg",
 			price = 999
 		)
+		Merchandise.objects.create(
+			name = "Marvin's Marvelous Cucumber Grab Bag",
+			description = "So you can recreate the heartwarming occurances of 'Get These Cucumbers Off Of My Face', we're offering a special limited time grab bag of assorted cucumbers! Comes in a decorative burlap sack.",
+			image = "/static/images/merchandise/cucumber.jpg",
+			price = 999
+		)
+		Merchandise.objects.create(
+			name = "Marvin's Marvelous Cucumber Grab Bag",
+			description = "So you can recreate the heartwarming occurances of 'Get These Cucumbers Off Of My Face', we're offering a special limited time grab bag of assorted cucumbers! Comes in a decorative burlap sack.",
+			image = "/static/images/merchandise/cucumber.jpg",
+			price = 999
+		)
+		Merchandise.objects.create(
+			name = "Marvin's Marvelous Cucumber Grab Bag",
+			description = "So you can recreate the heartwarming occurances of 'Get These Cucumbers Off Of My Face', we're offering a special limited time grab bag of assorted cucumbers! Comes in a decorative burlap sack.",
+			image = "/static/images/merchandise/cucumber.jpg",
+			price = 999
+		)
+		Merchandise.objects.create(
+			name = "Marvin's Marvelous Cucumber Grab Bag",
+			description = "So you can recreate the heartwarming occurances of 'Get These Cucumbers Off Of My Face', we're offering a special limited time grab bag of assorted cucumbers! Comes in a decorative burlap sack.",
+			image = "/static/images/merchandise/cucumber.jpg",
+			price = 999
+		)
+		Merchandise.objects.create(
+			name = "Marvin's Marvelous Cucumber Grab Bag",
+			description = "So you can recreate the heartwarming occurances of 'Get These Cucumbers Off Of My Face', we're offering a special limited time grab bag of assorted cucumbers! Comes in a decorative burlap sack.",
+			image = "/static/images/merchandise/cucumber.jpg",
+			price = 999
+		)
+		Merchandise.objects.create(
+			name = "Marvin's Marvelous Cucumber Grab Bag",
+			description = "So you can recreate the heartwarming occurances of 'Get These Cucumbers Off Of My Face', we're offering a special limited time grab bag of assorted cucumbers! Comes in a decorative burlap sack.",
+			image = "/static/images/merchandise/cucumber.jpg",
+			price = 999
+		)
+		Merchandise.objects.create(
+			name = "Marvin's Marvelous Cucumber Grab Bag",
+			description = "So you can recreate the heartwarming occurances of 'Get These Cucumbers Off Of My Face', we're offering a special limited time grab bag of assorted cucumbers! Comes in a decorative burlap sack.",
+			image = "/static/images/merchandise/cucumber.jpg",
+			price = 999
+		)
 	if not Show.objects.all():
 		Show.objects.create(
 			name = "Get These Cucumbers Off Of My Face",
@@ -46,7 +88,7 @@ try:
 		Show.objects.create(
 			name = "Yolo Swag: The Musical",
 			description = "Too much yolo to handle.",
-			image = "/media/images/shows/shows/80x80.gif",
+			image = "/static/images/shows/yolo-swag.jpg",
 			start_date = date(2015, 1, 24),
 			end_date = date(2015, 3, 5),
 			show_url = "/show5"
@@ -54,7 +96,7 @@ try:
 		Show.objects.create(
 			name = "Your Mom: The Saga Continues",
 			description = "A touching tale of intrigue and passion.",
-			image = "/static/images/shows/lady.jpg",
+			image = "/static/images/shows/your-mom.jpg",
 			start_date = date(2015, 2, 28),
 			end_date = date(2015, 3, 5)
 		)
@@ -68,14 +110,14 @@ try:
 		Show.objects.create(
 			name = "True Stories: The Ballmer Peak",
 			description = "A panel with the world's foremost computer scientists where they uncover the mysteries of drinking while coding.",
-			image = "/media/images/shows/shows/80x80.gif",
+			image = "/static/images/shows/ballmer-peak.jpg",
 			start_date = date(2015, 1, 31),
 			end_date = date(2015, 1, 31)
 		)
 		Show.objects.create(
 			name = "Salsa Dancing On Ice",
 			description = "A special one-weekend salsa skating extravagnza!",
-			image = "/media/images/shows/shows/80x80.gif",
+			image = "/static/images/shows/salsa.jpg",
 			start_date = date(2015, 2, 5),
 			end_date = date(2015, 2, 8)
 		)
